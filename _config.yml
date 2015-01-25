@@ -1,0 +1,6 @@
+# N posts per page
+paginate: 10
+# List of directories to exclude in Jekyll
+exclude: []
+# Do not include categories in post permalinks
+permalink: /articles/:title.html
