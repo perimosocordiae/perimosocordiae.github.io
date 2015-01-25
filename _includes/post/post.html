@@ -1,10 +1,11 @@
 <header>
-  <h1>{{ page.title }}</h1>
+  <h1>{{ post.title }}</h1>
   <p>
-    Published <a href="{{ post.url }}" rel="permalink">
     <time datetime='{{ post.date | date: "%Y-%m-%dT%H:%M:%S" }}' pubdate="pubdate">
-      {{ post.date | date: "%d %B %Y" }}
-    </time></a>
+      {{ post.date | date: "%B %d %Y" }}
+    </time>
+    &mdash;
+    <a href="{{ post.url }}" rel="permalink">permalink</a>
   </p>
 </header>
 {{ content }}
