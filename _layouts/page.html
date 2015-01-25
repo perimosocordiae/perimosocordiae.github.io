@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include common/head.html %}
+  </head>
+  <body>
+    {% include common/header.html %}
+    <div class="wrapper">
+      <section>
+        {% include common/navigation.html %}
+        {{ content }}
+      </section>
+    </div>
+    {% include common/tracker.html %}
+  </body>
+</html>
