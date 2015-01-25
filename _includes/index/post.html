@@ -1,11 +1,10 @@
 <header>
   <h1>{{ post.title }}</h1>
   <p>
-    Published
+    Published <a href="{{ post.url }}" rel="permalink">
     <time datetime='{{ post.date | date: "%Y-%m-%dT%H:%M:%S" }}' pubdate="pubdate">
       {{ post.date | date: "%d %B %Y" }}
-    </time>
-    <a href="{{ post.url }}" rel="permalink">permalink</a>
+    </time></a>
   </p>
 </header>
 {% if post.slug != nil %}
@@ -13,7 +12,7 @@
   {{ post.slug | textilize }}
 </blockquote>
 <p>
-  <a href="{{ post.url }}">Read more of “<cite>{{ post.title }}</cite>”…</a>
+  <a href="{{ post.url }}">Read on...</a>
 </p>
 {% else %}
 {{ post.content }}
